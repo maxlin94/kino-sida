@@ -11,8 +11,8 @@
 
 <body class="bg-body">
     <main class="grid-20-1fr gap-y-8 min-h-full w-full bg-primary absolute">
-        <%- include('sidebar', { active: '/movies' }) %>
-        <%- include('getMovies', { movies: [movie], btnText: 'Boka', href: '/booking/' }) %>
+        <%- include('./partials/sidebar', { active: '/movies' }) %>
+        <%- include('./partials/getMovies', { movies: [movie], btnText: 'Boka', href: '/booking/', showIntro: true }) %>
     </main>
 </body>
 
