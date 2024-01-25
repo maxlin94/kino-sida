@@ -625,16 +625,24 @@ video {
   width: 100%;
 }
 
-.w-\[80\%\] {
-  width: 80%;
+.w-\[70\%\] {
+  width: 70%;
 }
 
 .w-full {
   width: 100%;
 }
 
+.min-w-60 {
+  min-width: 15rem;
+}
+
 .max-w-\[600px\] {
   max-width: 600px;
+}
+
+.max-w-\[500px\] {
+  max-width: 500px;
 }
 
 .grid-cols-1 {
