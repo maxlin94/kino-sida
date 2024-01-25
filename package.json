@@ -5,8 +5,9 @@
   "main": "./src/index.js",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"nodemon index.js\" \"npx tailwindcss -i ./src/input.css -o ./public/output.css --watch\"",
-    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js"
+    "start": "node index.js",
+    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
+    "dev": "concurrently \"nodemon index.js\" \"npx tailwindcss -i ./src/input.css -o ./public/output.css --watch\""
   },
   "author": "",
   "license": "ISC",
