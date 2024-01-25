@@ -544,6 +544,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.static {
+  position: static;
+}
+
 .absolute {
   position: absolute;
 }
@@ -558,6 +562,15 @@ video {
 
 .row-auto {
   grid-row: auto;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .mb-10 {
@@ -584,28 +597,16 @@ video {
   display: grid;
 }
 
-.h-5\/6 {
-  height: 83.333333%;
-}
-
 .h-screen {
   height: 100vh;
 }
 
+.max-h-\[70\%\] {
+  max-height: 70%;
+}
+
 .max-h-screen {
   max-height: 100vh;
-}
-
-.max-h-96 {
-  max-height: 24rem;
-}
-
-.max-h-\[700px\] {
-  max-height: 700px;
-}
-
-.max-h-\[500px\] {
-  max-height: 500px;
 }
 
 .min-h-full {
@@ -616,16 +617,24 @@ video {
   width: 66.666667%;
 }
 
+.w-2\/5 {
+  width: 40%;
+}
+
+.w-\[100\%\] {
+  width: 100%;
+}
+
+.w-\[80\%\] {
+  width: 80%;
+}
+
 .w-full {
   width: 100%;
 }
 
-.w-screen {
-  width: 100vw;
-}
-
-.min-w-full {
-  min-width: 100%;
+.max-w-\[600px\] {
+  max-width: 600px;
 }
 
 .grid-cols-1 {
@@ -729,6 +738,11 @@ video {
   line-height: 1;
 }
 
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -781,9 +795,28 @@ body {
   grid-template-columns: 20rem 1fr;
 }
 
+@media (min-width: 640px) {
+  .sm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
 @media (min-width: 1024px) {
-  .lg\:grid-cols-2 {
+  .lg\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .xl\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }
 
