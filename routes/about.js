@@ -1,7 +1,9 @@
 import express from 'express';
 
-export const aboutRouter = express.Router();
+const aboutRouter = express.Router();
 
 aboutRouter.get('/', async (req, res) => {
     res.render('about');
 });
+
+export default aboutRouter;
