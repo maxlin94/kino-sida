@@ -5,7 +5,7 @@ export async function getMovieById(id) {
 }
 
 export async function getMovies() {
-    const response = await fetch(`https://plankton-app-xhkom.ondigitalocean.app/api/movsies/`);
+    const response = await fetch(`https://plankton-app-xhkom.ondigitalocean.app/api/movies/`);
     const json = await response.json();
     return json;
 }
