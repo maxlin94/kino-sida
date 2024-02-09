@@ -18,7 +18,6 @@ export function filterComingFiveDays(data) {
     const fiveDays = 5 * 24 * 60 * 60 * 1000;
     const maxScreenings = 10;
     return filteredOld
-    .sort((a, b) => new Date(a.attributes.start_time) - new Date(b.attributes.start_time))
     .filter((screening) => new Date(screening.attributes.start_time) < new Date(Date.now() + fiveDays))
     .slice(0, maxScreenings);
 }

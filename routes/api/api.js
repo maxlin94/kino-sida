@@ -22,7 +22,7 @@ apiRouter.get("/screenings/:id", async (req, res) => {
 });
 
 apiRouter.get("/screenings", async (req, res) => {
-    const payload = await cmsAdapter.get(`${APIBaseURL}/screenings?populate=movie`, filterComingFiveDays);
+    const payload = await cmsAdapter.get(`${APIBaseURL}/screenings?populate=movie`, filterComingFiveDays, true);
     res.json(payload);
 });
 

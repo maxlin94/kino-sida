@@ -12,7 +12,7 @@ async function renderScreenings() {
         const date = formatDate(screening.attributes.start_time).split(" ");
         const span = document.createElement('span');
         span.classList.add('text-white', 'text-lg')
-        span.textContent = `${screening.attributes.movie.data.attributes.title} | ${screening.attributes.room} | Datum: ${date[0]} Tid: ${date[1]}`;
+        span.textContent = `${screening.attributes.movie.data.attributes.title} | ${screening.attributes.room} | Datum: ${date[0]} Tid: ${date[1].substring(0, 5)}`;
         container.appendChild(span);
     });
 }
