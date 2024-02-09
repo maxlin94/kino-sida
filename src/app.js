@@ -6,6 +6,7 @@ import apiRouter from "../routes/api/api.js"
 
 const app = express();
 
+app.use(express.json());
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.get("/", (req, res) => {

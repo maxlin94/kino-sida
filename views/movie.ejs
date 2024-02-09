@@ -10,6 +10,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='/output.css'>
     <script src="/reviews.js" type="module" defer></script>
     <script src="/screenings.js" type="module" defer></script>
+    <script src="/postReview.js" type="module" defer></script>
 </head>
 
     <body class="bg-body">
@@ -19,6 +20,7 @@
                 <%- include('./partials/getMovies', { movies: [movie], hrefText: 'Boka' , href: '/booking/' , showIntro: true }) %>
                 <%- include('./partials/screenings') %>
                 <%- include('./partials/reviews') %>
+                <%- include('./partials/reviewForm') %>
             </div>
         </main>
     </body>
