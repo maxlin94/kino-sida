@@ -1,6 +1,6 @@
 import express from "express";
 import cmsAdapter from "../../utils/cmsAdapter.js";
-import { filterOldScreenings, filterReviews } from "../../utils/filters.js";
+import { filterComingFiveDays, filterOldScreenings, filterReviews } from "../../utils/filters.js";
 
 const apiRouter = express.Router();
 const APIBaseURL = 'https://plankton-app-xhkom.ondigitalocean.app/api';
@@ -22,7 +22,7 @@ apiRouter.get("/screenings/:id", async (req, res) => {
 });
 
 apiRouter.get("/screenings", async (req, res) => {
-    const payload = await cmsAdapter.get(`${APIBaseURL}/screenings?populate=movie`, filterOldScreenings);
+    const payload = await cmsAdapter.get(`${APIBaseURL}/screenings?populate=movie`, filterComingFiveDays);
     res.json(payload);
 });
 
