@@ -8,6 +8,7 @@ async function getScreenings(id) {
     return data;
 }
 
+
 screenings.forEach(screening => {
     const template = document.querySelector("#screening-template").content.cloneNode(true);
     const date = formatDate(screening.attributes.start_time);
